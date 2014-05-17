@@ -1,83 +1,22 @@
 <?php
 
-/**
- * Class CarFactory - Our main abstract factory
- */
-abstract class CarFactory {
-
-    abstract protected function create_car($type);
-
-}
-
-/**
- * Class GermanCarFactory - Creates all German cars
- */
-class GermanCarFactory extends CarFactory {
-
-    public function create_car($type)
-    {
-        switch($type) {
-            case 'BMW';
-                return new BMW();
-            break;
-
-            case 'Audi';
-                return new Audi();
-            break;
-        }
-    }
-
-}
-
-/**
- * Interface carInterface - The interface all cars must implement.
- */
-abstract class CarInterface {
-
-    protected $colour = 'red';
-
-    public function set_colour($colour)
-    {
-        $this->colour = $colour;
-    }
-
-}
-
-/**
- * Class BMW
- */
-class BMW extends CarInterface {
-
-    public function get_car_info()
-    {
-        return 'This is a nice '. $this->colour .' BMW!';
-    }
-
-}
-
-/**
- * Class Audi
- */
-class Audi extends CarInterface {
-
-    public function get_car_info()
-    {
-        return 'This is a nice '. $this->colour .' Audi!';
-    }
-
-}
+require_once('CarFactory.php');
+require_once('GermanCarFactory.php');
+require_once('CarInterface.php');
+require_once('Bmw.php');
+require_once('Audi.php');
 
 $german_car_factory = new GermanCarFactory();
 
 // Make my BMW
-$bmw = $german_car_factory->create_car('BMW');
-$bmw->set_colour('green');
-echo $bmw->get_car_info();
+$bmw = $german_car_factory->createCar('BMW');
+$bmw->setColour('green');
+echo $bmw->getCarInfo();
 
-echo '<br/>';
+echo '<hr />';
 
 // Make my audi
-$audi = $german_car_factory->create_car('Audi');
-$audi->set_colour('pink');
-echo $audi->get_car_info();
+$audi = $german_car_factory->createCar('Audi');
+$audi->setColour('pink');
+echo $audi->getCarInfo();
 
