@@ -6,9 +6,9 @@
 
 class NySauce {
 
-    public function addSauce()
+    public function __construct()
     {
-        return 'Smearing on NY sauce!';
+        echo 'Smearing on NY sauce!';
     }
 
 }

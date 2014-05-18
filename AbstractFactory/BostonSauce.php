@@ -4,11 +4,11 @@
  * This class could extend a sauce interface to make sure all sauce implementations are the same.
  */
 
-class BostonDough {
+class BostonSauce {
 
-    public function addSauce()
+    public function __construct()
     {
-        return 'Smearing on Boston sauce!';
+        echo 'Smearing on Boston sauce!';
     }
 
 }

@@ -2,6 +2,11 @@
 
 class BostonPizzaIngredientFactory implements PizzaIngredientFactoryInterface {
 
+    public function __construct()
+    {
+        echo '<h2>Making a Boston pizza!</h2>';
+    }
+
     public function createCheese()
     {
         return new BostonCheese();

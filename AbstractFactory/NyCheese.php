@@ -6,9 +6,9 @@
 
 class NyCheese {
 
-    public function addCheese()
+    public function __construct()
     {
-        return 'Adding NY cheese!';
+        echo 'Adding NY cheese!';
     }
 
 }

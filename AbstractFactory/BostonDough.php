@@ -6,9 +6,9 @@
 
 class BostonDough {
 
-    public function addDough()
+    public function __construct()
     {
-        return 'Kneading Boston dough!';
+        echo 'Kneading Boston dough!';
     }
 
 }
