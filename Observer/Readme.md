@@ -6,7 +6,7 @@ Can also be implemented using [SplSubject][1] and [SplObserver][2] interfaces.
 ___
 
 ##UML Diagratm!
-[Observer UML Diagram](uml/uml.png)
+[Observer UML Diagram](UML/uml.png)
 
 [1]:http://php.net/manual/en/class.splsubject.php
 [2]:http://php.net/manual/en/class.splobserver.php
